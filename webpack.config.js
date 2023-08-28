@@ -1,7 +1,6 @@
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const webpack = require("webpack");
 const path = require("path");
-const Dotenv = require("dotenv-webpack");
 
 module.exports = {
   mode: "development",
@@ -48,7 +47,7 @@ module.exports = {
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.EnvironmentPlugin({
-      DOMAIN: "development",
+      DOMAIN: "HELLO",
     }),
   ],
 };
