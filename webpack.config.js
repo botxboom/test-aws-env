@@ -47,6 +47,9 @@ module.exports = {
       patterns: ["*.html"],
     }),
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      DOMAIN: JSON.stringify(process.env.DOMAIN),
+    }),
     new Dotenv(),
   ],
 };
